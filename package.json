@@ -13,7 +13,7 @@
   "unpkg": "dist/facicons-ui/facicons-ui.esm.js",
   "repository": {
     "type": "git",
-    "url": "git+https://bitbucket.org/facilio/facilio-icons.git"
+    "url": "git+https://github.com/mohammed-sas/icons-test"
   },
   "files": [
     "dist/"
