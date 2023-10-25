@@ -13,17 +13,14 @@ export class FcIllustration {
   @State() url: any;
   @Watch('name')
   @Watch('size')
-  async componenetWillLoad() {
-    this.sym = Symbol.for('@facilio/icons/config');
-    await this.loadIcon();
-  }
-
   async loadIcon() {
+    this.sym = Symbol.for('@facilio/icons/config');
     let cdnUrl = 'https://static.facilio.com/icons/svg/';
     let baseUrl = window[this.sym]?.baseUrl ? window[this.sym].baseURL : cdnUrl;
     this.url = `${baseUrl}illustrations/${this.name}.webp`;
   }
-  render() {
+  async render() {
+    await this.loadIcon();
     const SIZE_HASH = {
       S: '80',
       M: '160',
