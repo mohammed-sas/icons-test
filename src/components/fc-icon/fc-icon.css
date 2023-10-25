@@ -1,0 +1,7 @@
+:host {
+  display: inline-block;
+}
+
+:host > div {
+  line-height: 0;
+}
