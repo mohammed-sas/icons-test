@@ -31,13 +31,15 @@ export class FcIllustration {
     return (
       <img
         src={this.url}
-        alt={this.name}
-        style={{
-          maxHeight: illustrationSize,
-          maxWidth: illustrationSize,
-          width: 'auto',
-          height: 'auto',
-        }}
+        height={illustrationSize}
+        width={illustrationSize}
+        // alt={this.name}
+        // style={{
+        //   maxHeight: illustrationSize,
+        //   maxWidth: illustrationSize,
+        //   width: 'auto',
+        //   height: 'auto',
+        // }}
       />
     );
   }
