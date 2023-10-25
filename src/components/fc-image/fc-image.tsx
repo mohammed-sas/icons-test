@@ -18,7 +18,7 @@ export class FcImage {
     this.sym = Symbol.for('@facilio/icons/config');
     let cdnUrl = 'https://static.facilio.com/icons/svg/';
     let baseUrl = window[this.sym]?.baseUrl ? window[this.sym].baseURL : cdnUrl;
-    this.url = `${baseUrl}image/${this.name}.webp`;
+    this.url = `${baseUrl}images/${this.name}.webp`;
   }
   render() {
     this.loadIcon();
