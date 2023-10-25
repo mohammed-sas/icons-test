@@ -40,7 +40,7 @@ export class FcIllustration {
         //   width: 'auto',
         //   height: 'auto',
         // }}
-      />
+      ></img>
     );
   }
 }
