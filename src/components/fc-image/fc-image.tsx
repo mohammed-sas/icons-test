@@ -14,17 +14,14 @@ export class FcImage {
   @State() url: any;
 
   @Watch('name')
-  async componenetWillLoad() {
+  loadIcon() {
     this.sym = Symbol.for('@facilio/icons/config');
-    await this.loadIcon();
-  }
-
-  async loadIcon() {
     let cdnUrl = 'https://static.facilio.com/icons/svg/';
     let baseUrl = window[this.sym]?.baseUrl ? window[this.sym].baseURL : cdnUrl;
-    this.url = `${baseUrl}image/${this.name}.svg`;
+    this.url = `${baseUrl}image/${this.name}.webp`;
   }
   render() {
+    this.loadIcon();
     return (
       <img
         src={this.url}
