@@ -22,9 +22,9 @@ export class FcIllustration {
   async render() {
     await this.loadIcon();
     const SIZE_HASH = {
-      S: '80',
-      M: '160',
-      L: '320',
+      S: '80px',
+      M: '160px',
+      L: '320px',
     };
     let illustrationSize = SIZE_HASH[this.size];
 
