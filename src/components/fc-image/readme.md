@@ -11,7 +11,7 @@
 | -------- | --------- | ----------- | -------- | ----------- |
 | `height` | `height`  |             | `number` | `undefined` |
 | `name`   | `name`    |             | `string` | `undefined` |
-| `style`  | --        |             | `object` | `undefined` |
+| `styles` | --        |             | `object` | `undefined` |
 | `width`  | `width`   |             | `number` | `undefined` |
 
 

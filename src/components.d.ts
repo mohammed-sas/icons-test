@@ -19,7 +19,7 @@ export namespace Components {
     interface FcImage {
         "height": number;
         "name": string;
-        "style": object;
+        "styles": object;
         "width": number;
     }
 }
@@ -62,7 +62,7 @@ declare namespace LocalJSX {
     interface FcImage {
         "height"?: number;
         "name"?: string;
-        "style"?: object;
+        "styles"?: object;
         "width"?: number;
     }
     interface IntrinsicElements {
