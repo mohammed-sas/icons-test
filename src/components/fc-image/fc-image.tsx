@@ -9,7 +9,7 @@ export class FcImage {
   @Prop() name: string;
   @Prop() width: number;
   @Prop() height: number;
-  @Prop() style: object;
+  @Prop() styles: object;
   @State() sym: symbol;
   @State() baseURL: string;
   @State() url: any;
@@ -32,7 +32,7 @@ export class FcImage {
           maxWidth: this.width + 'px',
           width: 'auto',
           height: 'auto',
-          ...(this.style || {}),
+          ...(this.styles || {}),
         }}
       />
     );
