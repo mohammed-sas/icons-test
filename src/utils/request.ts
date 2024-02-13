@@ -5,7 +5,9 @@ export const getSvgContent = (url: string) => {
   let req = requests.get(url);
   if (!req) {
     let [reqURL] = url.split(',');
-    req = fetch(reqURL).then(rsp => {
+    req = fetch(reqURL, {
+      mode: 'no-cors',
+    }).then(rsp => {
       if (rsp.ok) {
         return rsp.text().then(svgContent => {
           iconContent.set(url, svgContent || '');
