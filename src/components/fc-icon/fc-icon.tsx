@@ -1,5 +1,11 @@
 import { Component, h, Prop, State, Watch } from '@stencil/core';
 import { getSvgContent, iconContent } from '../../utils/request';
+import { RTL_ICONS } from './constants.js';
+declare global {
+  interface Window {
+    rtl: boolean;
+  }
+}
 @Component({
   tag: 'fc-icon',
   styleUrl: 'fc-icon.css',
@@ -24,9 +30,18 @@ export class FcIcon {
   }
   async loadIcon() {
     // give the cdn url or url based on @facilio/icons/config symbol
-    let cdnUrl = 'https://static.facilio.com/icons/svg/';
+    let cdnUrl = 'https://icons.facilio.com/icons/svg/';
     let baseUrl = window[this.sym]?.baseUrl ? window[this.sym].baseURL : cdnUrl;
-    const url = `${baseUrl}${this.group}/${this.name}.svg`;
+    let iconName = '';
+    if (window.rtl) {
+      iconName = RTL_ICONS[this.name];
+      if (!iconName) {
+        iconName = this.name;
+      }
+    } else {
+      iconName = this.name;
+    }
+    const url = `${baseUrl}${this.group}/${iconName}.svg`;
     if (iconContent.has(url)) {
       this.svgContent = iconContent.get(url);
     } else {

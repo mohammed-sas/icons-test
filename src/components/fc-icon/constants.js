@@ -1,0 +1,18 @@
+export const RTL_ICONS = {
+  'chevron-left': 'chevron-right',
+  'chevron-right': 'chevron-left',
+  'double-chevron-left': 'double-chevron-right',
+  'double-chevron-right': 'double-chevron-left',
+  'accordion-left': 'accordion-right',
+  'accordion-right': 'accordion-left',
+  'double-arrow-left': 'double-arrow-right',
+  'double-arrow-right': 'double-arrow-left',
+  'enter-left': 'enter-right',
+  'enter-right': 'enter-left',
+  'left': 'right',
+  'right': 'left',
+  'left-accordion-circle': 'right-accordion-circle',
+  'right-accordion-circle': 'left-accordion-circle',
+  'return-left': 'return-right',
+  'return-right': 'return-left',
+};
