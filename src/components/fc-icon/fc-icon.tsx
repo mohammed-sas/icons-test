@@ -15,6 +15,7 @@ export class FcIcon {
   @State() icon: any;
   @State() baseURL: string;
   @State() sym: symbol;
+  @State() url: string;
   @Watch('name')
   @Watch('icon')
   async componentWillLoad() {
@@ -27,17 +28,20 @@ export class FcIcon {
     let cdnUrl = 'https://static.facilio.com/icons/svg/';
     let baseUrl = window[this.sym]?.baseUrl ? window[this.sym].baseURL : cdnUrl;
     const url = `${baseUrl}${this.group}/${this.name}.svg`;
-    if (iconContent.has(url)) {
-      this.svgContent = iconContent.get(url);
-    } else {
-      await getSvgContent(url).then(() => (this.svgContent = iconContent.get(url)));
-    }
+    this.url = url;
+    // if (iconContent.has(url)) {
+    //   this.svgContent = iconContent.get(url);
+    // } else {
+    //   await getSvgContent(url).then(() => (this.svgContent = iconContent.get(url)));
+    // }
   }
 
   render() {
-    let styledSvg = `<svg class="${this.iconClass ? this.iconClass : 'icon'}" style="height:${this.size}px; width: ${this.size}px; fill: ${this.color}"`;
-    styledSvg = this.svgContent.replace(/<svg/, styledSvg);
-    this.icon = styledSvg;
-    return <div class="fc-icon-svg-container" innerHTML={this.icon} />;
+    // let styledSvg = `<svg class="${this.iconClass ? this.iconClass : 'icon'}" style="height:${this.size}px; width: ${this.size}px; fill: ${this.color}"`;
+    // styledSvg = this.svgContent.replace(/<svg/, styledSvg);
+    // this.icon = styledSvg;
+    // return <div class="fc-icon-svg-container" innerHTML={this.icon} />;
+
+    return <img src={this.url} style={{ height: `${this.size}px`, width: `${this.size}px` }} />;
   }
 }
