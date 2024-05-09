@@ -1,5 +1,5 @@
 import { Component, h, Prop, State, Watch } from '@stencil/core';
-import { getSvgContent, iconContent } from '../../utils/request';
+// import { getSvgContent, iconContent } from '../../utils/request';
 @Component({
   tag: 'fc-icon',
   styleUrl: 'fc-icon.css',
