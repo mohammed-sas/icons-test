@@ -42,6 +42,6 @@ export class FcIcon {
     // this.icon = styledSvg;
     // return <div class="fc-icon-svg-container" innerHTML={this.icon} />;
 
-    return <img src={this.url} style={{ height: `${this.size}px`, width: `${this.size}px` }} />;
+    return <img src={this.url} style={{ height: `${this.size}px`, width: `${this.size}px`, color: this.color }} />;
   }
 }
