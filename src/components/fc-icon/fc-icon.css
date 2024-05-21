@@ -5,3 +5,6 @@
 :host > div {
   line-height: 0;
 }
+img.facilio-icon > svg {
+  fill: currentColor !important;
+}
