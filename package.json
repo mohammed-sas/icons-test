@@ -11,6 +11,7 @@
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
   "unpkg": "dist/facicons-ui/facicons-ui.esm.js",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mohammed-sas/icons-test"
