@@ -1,6 +1,6 @@
 {
   "name": "ficons-test",
-  "version": "3.3.6",
+  "version": "3.3.7",
   "rc_version": "illustrations-1.0",
   "description": "Facilio icons as web components",
   "main": "dist/index.cjs.js",
